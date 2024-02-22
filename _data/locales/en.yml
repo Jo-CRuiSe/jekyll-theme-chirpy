@@ -11,6 +11,7 @@ layout:
 tabs:
   # format: <filename_without_extension>: <value>
   home: Home
+  gallery: Gallery
   categories: Categories
   tags: Tags
   archives: Archives
@@ -20,7 +21,7 @@ tabs:
 search:
   hint: search
   cancel: Cancel
-  no_results: Oops! No results found.
+  no_results: Oops! No result founds.
 
 panel:
   lastmod: Recently Updated
@@ -40,14 +41,13 @@ copyright:
     Except where otherwise noted, the blog posts on this site are licensed
     under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.
 
-meta: Using the :THEME theme for :PLATFORM.
+meta: Powered by :PLATFORM with :THEME theme.
 
 not_found:
   statment: Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
-
-notification:
-  update_found: A new version of content is available.
-  update: Update
+  hint_template: :HEAD_BAK to try finding it again, or search for it on the :ARCHIVES_PAGE.
+  head_back: Head back Home
+  archives_page: Archives page
 
 # ----- Posts related labels -----
 
@@ -70,22 +70,27 @@ post:
     share_link:
       title: Copy link
       succeed: Link copied successfully!
-
-# Date time format.
-# See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
-df:
-  post:
-    strftime: "%b %e, %Y"
-    dayjs: "ll"
-  archives:
-    strftime: "%b"
-    dayjs: "MMM"
+  # pinned prompt of posts list on homepage
+  pin_prompt: Pinned
 
 # categories page
 categories:
-  category_measure:
-    singular: category
-    plural: categories
-  post_measure:
-    singular: post
-    plural: posts
+  category_measure: categories
+  post_measure: posts
+
+# login and forgot page
+login:
+  username: Username
+  password: Password
+  login: Login
+  register: Register
+  logout: Logout
+  forgot: Forgot
+  forgot_prompt: Enter the email you used to login
+  forgot_password: Forgot Password?
+  go_to_register: Go to Register
+  new_username: New Username
+  new_password: New Password
+  email: Email(MUST)
+  confirm: Confirm
+
