@@ -48,6 +48,8 @@
   {% assign _img_content = null %}
   {% assign _img_snippets = _content | split: IMG_TAG %}
 
+
+
   {% for _img_snippet in _img_snippets %}
     {% if forloop.first %}
       {% assign _img_content = _img_snippet %}
