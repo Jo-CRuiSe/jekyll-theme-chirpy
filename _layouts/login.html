@@ -213,8 +213,12 @@ layout: compress
 
                         let redirectUrl = decodeURIComponent(getUrlParameter('redirect'));
 
-                        window.location.href = redirectUrl;
-                        /* window.location.href = '{{ site.baseurl }}'; */
+                        if(redirectUrl!=''){
+                            window.location.href = redirectUrl;
+                        }
+                        else {
+                            window.location.href = '{{ site.baseUrl }}';
+                        }
                     } else {
                         alert('当前用户邮箱未通过验证，暂时无法登录');
                     }
