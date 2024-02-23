@@ -1,4 +1,6 @@
-/* The common styles */
+/*
+  The common styles
+*/
 
 html {
   @media (prefers-color-scheme: light) {
@@ -105,6 +107,7 @@ blockquote {
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
     }
+
   }
 
   @include prompt('tip', '\f0eb', 'regular');
@@ -142,10 +145,6 @@ footer {
     &:hover {
       @extend %link-hover;
     }
-  }
-
-  em {
-    @extend %text-highlight;
   }
 
   p {
@@ -689,7 +688,7 @@ $btn-mb: 0.5rem;
   top: 0;
   left: 0;
   height: 100%;
-  overflow-y: auto;
+  // overflow-y: auto;
   width: $sidebar-width;
   z-index: 99;
   background: var(--sidebar-bg);
