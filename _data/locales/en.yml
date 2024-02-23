@@ -11,7 +11,6 @@ layout:
 tabs:
   # format: <filename_without_extension>: <value>
   home: Home
-  gallery: Gallery
   categories: Categories
   tags: Tags
   archives: Archives
@@ -82,15 +81,35 @@ categories:
 login:
   username: Username
   password: Password
+  enter_username: Please enter your username
+  enter_password: Please enter your password
   login: Login
+  login_fail: Login failed!
+  enter_vaild_email: Please enter valid email address!
+  waiting_for_verification: Registration successful, waiting for email verification. Message has been sent!
   register: Register
+  register_fail: Register failed!
+  email_not_verified: The current user's email has not been verified and cannot be logged in temporarily.
   logout: Logout
   forgot: Forgot
-  forgot_prompt: Enter the email you used to login
+  forgot_prompt: Enter your registered email address
   forgot_password: Forgot Password?
+  go_to_login: Go to Login
   go_to_register: Go to Register
   new_username: New Username
   new_password: New Password
   email: Email(MUST)
+  reset_password_success: Password reset email has been sent!
+  email_missing: Please enter your email address.
   confirm: Confirm
+
+# sidebar
+sidebar:
+  new_avatar: Please provide the URL of the new avatar
+  new_nickname: Please enter your new nickname
+  optional: Optioinal
+  invalid_url: Invalid URL
+  submit: Submit
+  cancel: Cancel
+  save_success: Save Successfully!
 

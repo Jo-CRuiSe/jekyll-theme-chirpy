@@ -15,8 +15,10 @@ layout: compress
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
+  {% include mathjax_support.html %}
+  <body style="display: none;">
+    {% include loader.html %}
 
-  <body>
     {% include sidebar.html lang=lang %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
@@ -76,6 +78,8 @@ layout: compress
 
     <!-- JavaScripts -->
 
+    {% include login-check.html %}
+
     {% include js-selector.html %}
 
     {% if page.mermaid %}
@@ -83,5 +87,7 @@ layout: compress
     {% endif %}
 
     {% include_cached search-loader.html %}
+    
+    
   </body>
 </html>

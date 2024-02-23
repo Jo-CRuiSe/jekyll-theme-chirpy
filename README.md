@@ -1,81 +1,83 @@
-<div align="center">
+# Unpublished Posts Enhancement for Chirpy Theme
 
-  # Chirpy Jekyll Theme
+[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
+[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
-  A minimal, responsive, and feature-rich Jekyll theme for technical writing.
+*Derived from Chirpy theme*
 
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)][gem]&nbsp;
-  [![CI](https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml/badge.svg?branch=master&event=push)][ci]&nbsp;
-  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e556876a3c54d5e8f2d2857c4f43894)][codacy]&nbsp;
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)][license]&nbsp;
-  [![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+## Installation
 
-  [**Live Demo** →][demo]
+### Creating a New URL
 
-  [![Devices Mockup](https://chirpy-img.netlify.app/commons/devices-mockup.png)][demo]
+Sign in to GitHub and browse to [**unpublished-posts-enhancement**](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement), click the button <kbd>Use this template</kbd> > <kbd>Create a new repository</kbd>, and name the new repository to what you like which represents your unpulished posts pages URL.
 
-</div>
+### Installing Dependencies
 
-## Features
+Before running local server for the first time, go to the root directory of your site and run:
 
-- Dark / Light Theme Mode
-- Localized UI language
-- Pinned Posts on Home Page
-- Hierarchical Categories
-- Trending Tags
-- Table of Contents
-- Last Modified Date
-- Syntax Highlighting
-- Mathematical Expressions
-- Mermaid Diagrams & Flowcharts
-- Dark / Light Mode Images
-- Embed Videos
-- Disqus / Giscus / Utterances Comments
-- Built-in Search
-- Atom Feeds
-- PWA
-- Google Analytics / GoatCounter
-- SEO & Performance Optimization
+```console
+$ bundle
+```
 
-## Documentation
+## Usage
 
-To learn how to use, develop, and upgrade the project, please refer to the [Wiki][wiki].
+You may want to preview the site contents before publishing, so just run it by:
 
-## Contributing
+```console
+$ bundle exec jekyll s
+```
 
-Contributions (_pull requests_, _issues_, and _discussions_) are what make the open-source community such an amazing place
-to learn, inspire, and create. Any contributions you make are greatly appreciated.
-For details, see the "[Contributing Guidelines][contribute-guide]".
+After a few seconds, the local service will be published at _<http://127.0.0.1:4000>_.
 
-## Credits
+## Deployment
 
-### Contributors
+Before the deployment begins, check out the file `_config.yml`{: .filepath} and make sure the `url` is configured correctly. Remember to change the `baseurl` to your project name that starts with a slash, e.g, `/project-name`.
 
-Thanks to [all the contributors][contributors] involved in the development of the project!
+Now you can choose _ONE_ of the following methods to deploy your Jekyll site.
 
-[![all-contributors](https://contrib.rocks/image?repo=cotes2020/jekyll-theme-chirpy&columns=16)][contributors]
-<sub> —— Made with [contrib.rocks](https://contrib.rocks)</sub>
+### Deploy by Using GitHub Actions
 
-### Third-Party Assets
+There are a few things to get ready for.
 
-This project is built on the [Jekyll][jekyllrb] ecosystem and some [great libraries][lib], and is developed using [VS Code][vscode] as well as tools provided by [JetBrains][jetbrains] under a non-commercial open-source software license.
+- If you're on the GitHub Free plan, keep your site repository public.
+- If you have committed `Gemfile.lock`{: .filepath} to the repository, and your local machine is not running Linux, go to the root of your site and update the platform list of the lock-file:
 
-The avatar and favicon for the project's website are from [ClipartMAX][clipartmax].
+  ```console
+  $ bundle lock --add-platform x86_64-linux
+  ```
+
+Next, configure the _Pages_ service.
+
+1. Browse to your repository on GitHub. Select the tab _Settings_, then click _Pages_ in the left navigation bar. Then, in the **Source** section (under _Build and deployment_), select [**GitHub Actions**][pages-workflow-src] from the dropdown menu.  
+
+2. Push any commits to GitHub to trigger the _Actions_ workflow. In the _Actions_ tab of your repository, you should see the workflow _Build and Deploy_ running. Once the build is complete and successful, the site will be deployed automatically.
+
+At this point, you can go to the URL indicated by GitHub to access your site.
+
+### Manually Build and Deploy
+
+On self-hosted servers, you cannot enjoy the convenience of **GitHub Actions**. Therefore, you should build the site on your local machine and then upload the site files to the server.
+
+Go to the root of the source project, and build your site as follows:
+
+```console
+$ JEKYLL_ENV=production bundle exec jekyll b
+```
+
+Unless you specified the output path, the generated site files will be placed in folder `_site`{: .filepath} of the project's root directory. Now you should upload those files to the target server.
+
+## Configuration
+
+[This blog](https://jo-cruise.github.io/2024-02-06-HowToUseUPE) will guide you to complete relative configuration.
+
 
 ## License
 
-This project is published under [MIT License][license].
+This work is published under [MIT][mit] License.
 
 [gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[ci]: https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml?query=event%3Apush+branch%3Amaster
-[codacy]: https://app.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
-[license]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE
-[jekyllrb]: https://jekyllrb.com/
-[clipartmax]: https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/
-[demo]: https://cotes2020.github.io/chirpy-demo/
-[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
-[contribute-guide]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/docs/CONTRIBUTING.md
-[contributors]: https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors
-[lib]: https://github.com/cotes2020/chirpy-static-assets
-[vscode]: https://code.visualstudio.com/
-[jetbrains]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
+[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
+[use-template]: https://github.com/cotes2020/chirpy-starter/generate
+[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
+[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+[https://github.com/Jo-CRuiSe/unpublished-posts-enhancement]: UnpublishedPostsEnhancementforChirpyTheme
