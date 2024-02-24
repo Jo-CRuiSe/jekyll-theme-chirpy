@@ -91,7 +91,7 @@ login:
   login: 登入
   login_fail: 登入失敗！
   enter_vaild_email: 請輸入有效的電子郵件地址！
-  waiting_for_verification: 註冊成功，等待郵件驗證。 消息已發送！
+  waiting_for_verification: 註冊成功，等待郵件驗證。消息已發送！
   register: 註冊
   register_fail: 註冊失敗！
   email_not_verified: 目前使用者的郵箱尚未驗證，暫時無法登入。
