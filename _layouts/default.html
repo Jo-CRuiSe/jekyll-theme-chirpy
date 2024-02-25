@@ -15,7 +15,6 @@ layout: compress
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
-  {% include mathjax_support.html %}
   <body style="display: none;">
     {% include loader.html %}
 
@@ -79,6 +78,8 @@ layout: compress
     <!-- JavaScripts -->
 
     {% include login-check.html %}
+
+    {% include mathjax_support.html %}
 
     {% include js-selector.html %}
 
