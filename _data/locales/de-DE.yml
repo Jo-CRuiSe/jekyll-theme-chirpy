@@ -1,0 +1,122 @@
+# The layout text of site
+
+# ----- Commons label -----
+
+layout:
+  post: Eintrag
+  category: Kategorie
+  tag: Tag
+
+# The tabs of sidebar
+tabs:
+  # format: <filename_without_extension>: <value>
+  home: Startseite
+  categories: Kategorien
+  tags: Tags
+  archives: Archiv
+  about: Über
+
+# the text displayed in the search bar & search results
+search:
+  hint: Suche
+  cancel: Abbrechen
+  no_results: Ups! Keine Einträge gefunden.
+
+panel:
+  lastmod: Kürzlich aktualisiert
+  trending_tags: Beliebte Tags
+  toc: Inhalt
+
+copyright:
+  # Shown at the bottom of the post
+  license:
+    template: Dieser Eintrag ist vom Autor unter :LICENSE_NAME lizensiert.
+    name: CC BY 4.0
+    link: https://creativecommons.org/licenses/by/4.0/
+
+  # Displayed in the footer
+  brief: Einige Rechte vorbehalten.
+  verbose: >-
+    Alle Einträge auf dieser Seite stehen, soweit nicht anders angegeben, unter der Lizenz Creative Commons Attribution 4.0 (CC BY 4.0).
+
+meta: Powered by :PLATFORM with :THEME theme
+
+not_found:
+  statment: Entschuldigung, dieser Link verweist auf keine vorhandene Ressource.
+
+notification:
+  update_found: Eine neue Version ist verfügbar.
+  update: Neue Version
+
+# ----- Posts related labels -----
+
+post:
+  written_by: Von
+  posted: Veröffentlicht
+  updated: Aktualisiert
+  words: Wörter
+  pageview_measure: Aufrufe
+  read_time:
+    unit: Minuten
+    prompt: Lesezeit
+  relate_posts: Weiterlesen
+  share: Teilen
+  button:
+    next: Nächster Eintrag
+    previous: Eintrag vorher
+    copy_code:
+      succeed: Kopiert!
+    share_link:
+      title: Link kopieren
+      succeed: Link erfolgreich kopiert!
+
+# Date time format.
+# See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
+df:
+  post:
+    strftime: "%d.%m.%Y"
+    dayjs: "DD.MM.YYYY"
+    
+# categories page
+categories:
+  category_measure:
+    singular: Kategorie
+    plural: Kategorien
+  post_measure:
+    singular: Eintrag
+    plural: Einträge
+
+# login and forgot page
+login:
+  username: Benutzername
+  password: Passwort
+  enter_username: Bitte geben Sie Ihren Benutzernamen ein.
+  enter_password: Bitte geben Sie Ihr Passwort ein.
+  login: Anmelden
+  login_fail: Anmeldung fehlgeschlagen!
+  enter_vaild_email: Bitte geben Sie eine gültige E-Mail-Adresse ein!
+  waiting_for_verification: Registrierung erfolgreich, warte auf E-Mail-Verifizierung. E-Mail wurde gesendet!
+  register: Registrieren
+  register_fail: Registrierung fehlgeschlagen!
+  email_not_verified: Die E-Mail-Adresse des aktuellen Benutzers ist nicht verifiziert und kann sich vorübergehend nicht anmelden.
+  logout: Abmelden
+  forgot: Passwort zurücksetzen
+  forgot_prompt: Geben Sie die E-Mail-Adresse ein, die Sie bei der Registrierung verwendet haben.
+  forgot_password: Passwort vergessen?
+  go_to_login: Zur Anmeldung
+  go_to_register: Zur Registrierung
+  new_username: Neuer Benutzername
+  new_password: Neues Passwort
+  email: E-Mail (erforderlich)
+  reset_password_success: E-Mail zum Zurücksetzen des Passworts wurde gesendet!
+  email_missing: Bitte geben Sie Ihre E-Mail-Adresse ein.
+  confirm: Bestätigen
+
+sidebar:
+  new_avatar: Bitte geben Sie die URL des neuen Avatars an
+  new_nickname: Bitte geben Sie Ihren neuen Spitznamen ein
+  optional: Optional
+  invalid_url: Ungültige URL!
+  submit: Absenden
+  cancel: Abbrechen
+  save_success: Speichern erfolgreich!

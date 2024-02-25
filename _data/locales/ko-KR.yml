@@ -90,8 +90,8 @@ login:
   register: 등록하다
   register_fail: 등록 실패!
   email_not_verified: 현재 사용자의 이메일은 인증되지 않아 일시적으로 로그인이 불가능합니다.
-  logout: 로그 아웃
-  forgot: 암호를 재설정
+  logout: 로그아웃
+  forgot: 암호 재설정
   forgot_prompt: 등록된 이메일 주소를 입력하세요
   forgot_password: 비밀번호를 잊으 셨나요?
   go_to_login: 로그인으로 이동
@@ -101,7 +101,7 @@ login:
   email: 이메일(필수)
   reset_password_success: 비밀번호 재설정 메일이 발송되었습니다!
   email_missing: 당신의 이메일 주소를 입력하십시오.
-  confirm: 확신하는
+  confirm: 확신
 
 # sidebar
 sidebar:
