@@ -79,9 +79,9 @@ layout: compress
 
     {% include login-check.html %}
 
-    {% if page.layout == 'home' %}
+    {% unless page.layout == 'post' or page.layout == 'archives' %}
       {% include mathjax_support.html %}
-    {% endif %}
+    {% endunless %}
 
     {% include js-selector.html %}
 
