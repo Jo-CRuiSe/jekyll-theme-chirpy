@@ -79,9 +79,11 @@ layout: compress
 
     {% include login-check.html %}
 
-    {% unless page.layout == 'post' or page.layout == 'archives' %}
-      {% include mathjax_support.html %}
-    {% endunless %}
+    {% if site.mathjax.display_on_home.enabled %}
+      {% unless page.layout == 'post' or page.layout == 'archives' %}
+        {% include mathjax_support.html %}
+      {% endunless %}
+    {% endif %}
 
     {% include js-selector.html %}
 
