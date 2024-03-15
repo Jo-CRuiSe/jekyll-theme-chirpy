@@ -77,7 +77,9 @@ layout: compress
 
     <!-- JavaScripts -->
 
-    {% include login-check.html %}
+    {% if site.Leancloud.needLogin %}
+      {% include login-check.html %}
+    {% endif %}
 
     {% if site.mathjax.display_on_home.enabled %}
       {% unless page.layout == 'post' or page.layout == 'archives' %}
@@ -93,6 +95,11 @@ layout: compress
 
     {% include_cached search-loader.html %}
     
+    {%  unless site.Leancloud.needLogin %}
+      <script>
+        document.querySelector('body').style.display='block';
+      </script>  
+    {% endunless %} 
     
   </body>
 </html>

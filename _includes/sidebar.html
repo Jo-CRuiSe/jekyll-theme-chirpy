@@ -1,17 +1,30 @@
 <!-- The Side Bar -->
 <style>
-  #InfoForm {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  max-width: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  animation: appear 0.3s ease-in-out;
-  transition: 0.3s;
+  .info-form {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -60%);
+    animation: disappear 0.3s ease-in-out;
+  }
+
+  .info-form.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    animation: appear 0.3s ease-in-out;
+  }
+
+  .gal-info {
+    transition: all 0.3s ease-in-out;
   }
   
   @keyframes appear {
@@ -23,6 +36,18 @@
     opacity: 1;
     transform: translate(-50%, -50%);
   }
+  }
+
+  @keyframes disappear {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+
   }
 
   .form-changeInfo input[type="text"], 
@@ -68,6 +93,7 @@
 </style>
 
 {% include lang.html %}
+{% if site.Leancloud.needLogin %}
 <div id = "InfoForm">
   <div class = "info">
       <form target="_self" class="form-changeInfo">
@@ -93,10 +119,13 @@
   </div>
 </div>
 <div class="gal-info"></div>
+{% endif %}
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  {% if site.Leancloud.needLogin %}
   <a href="javascript:void(0)" id="changeInfo" onclick="document.getElementById('InfoForm').style.display = 'flex'; document.querySelector('.gal-info').classList.add('active');" style="position: absolute; top: 140px; left: 150px;">
     <i class="fa-fw fas fa-pen-to-square"></i>
   </a>
+  {% endif %}
   <header class="profile-wrapper">
     <a href="{{ site.baseurl }}" id="avatar" class="rounded-circle">
       {%- if site.avatar != empty and site.avatar -%}
@@ -108,7 +137,7 @@
     </a>
 
     <div class="site-title">
-      <a href="{{ site.baseurl }}">Hi Guest!</a>
+      <a href="{{ site.baseurl }}">{{site.social.name}</a>
     </div>
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
   </header>
@@ -189,9 +218,11 @@
         </a>
       {% endif %}
     {% endfor %}
+    {% if site.Leancloud.needLogin %}
       <a href="javascript:void(0);" onclick="AV.User.logOut();setTimeout(function() { window.location.reload(); }, 1000)" title="{{ site.data.locales[lang].login.logout }}">
         <i class="fas fa-right-from-bracket" style="color: rgb(181, 27, 27);"></i>
       </a>
+    {% endif %}
   </div>
   <!-- .sidebar-bottom -->
 </aside>
@@ -202,6 +233,8 @@
       window.location.href = '{{ site.baseurl }}';
     });
 </script>
+
+{% if site.Leancloud.needLogin %}
 <script>
   var formValidate = {
     checkNickname: function() {
@@ -260,4 +293,5 @@
     event.preventDefault();
   });
 </script>
+{% endif %}
 

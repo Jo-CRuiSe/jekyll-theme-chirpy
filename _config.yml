@@ -184,6 +184,7 @@ Leancloud:
   appKey: 'example' # fill with your Leancloud appKey
   serverURL: 'example' # fill with your Leancloud serverURL
   allowRegister: true # allow registration for your website
+  needLogin: true # need login to visit your website?
 
 # ------------ The following options are not recommended to be modified ------------------
 
