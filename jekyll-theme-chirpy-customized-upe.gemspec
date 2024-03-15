@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-chirpy-customized-upe"
-  spec.version       = "3.2.0"
-  spec.authors       = ["Jo Cruise"]
+  spec.version       = "4.0.0.pre.beta2"
+  spec.authors       = ["Cotes Chung","Jo Cruise"]
   spec.email         = ["1973851482@qq.com"]
 
   spec.summary       = "A minimal, responsive, and feature-rich Jekyll theme for technical writing."
@@ -14,6 +14,13 @@ Gem::Specification.new do |spec|
     f.match(%r!^((_(includes|layouts|sass|(data\/(locales|origin)))|assets|login)\/|README|LICENSE)!i)
   }
 
+  spec.metadata = {
+    "bug_tracker_uri"   => "https://github.com/Jo-CRuiSe/jekyll-theme-chirpy-customized-upe/issues",
+    "documentation_uri" => "https://github.com/Jo-CRuiSe/jekyll-theme-chirpy-customized-upe/#readme",
+    "homepage_uri"      => "https://jo-cruise.github.io/GemTest",
+    "source_code_uri"   => "https://github.com/Jo-CRuiSe/jekyll-theme-chirpy-customized-upe",
+    "plugin_type"       => "theme"
+  }
 
 
   spec.required_ruby_version = ">= 3.0"
