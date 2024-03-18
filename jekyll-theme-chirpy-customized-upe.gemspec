@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-chirpy-customized-upe"
-  spec.version       = "4.0.0.pre.beta2"
+  spec.version       = "4.0.0"
   spec.authors       = ["Cotes Chung","Jo Cruise"]
   spec.email         = ["1973851482@qq.com"]
 
