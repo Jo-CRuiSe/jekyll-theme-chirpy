@@ -15,7 +15,7 @@
 
 ### 创建一个新的URL
 
-登录GitHub并浏览到[**unpublished-posts-enhancement**](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement)页面，点击按钮<kbd>Use this template</kbd> > <kbd>Create a new repository</kbd>，然后为新的存储库命名，以表示您未发布的帖子页面的URL。
+登录GitHub并浏览到[**unpublished-posts-enhancement**](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement)页面，点击按钮<kbd>[Use this template][use-template]</kbd> > <kbd>Create a new repository</kbd>，然后为新的存储库命名，以表示您未发布的帖子页面的URL。
 
 ### 安装依赖项
 

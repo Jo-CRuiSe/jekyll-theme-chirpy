@@ -5,6 +5,8 @@
 
 *Derived from [Chirpy][chirpy] theme*
 
+[中文版](https://github.com/Jo-CRuiSe/jekyll-theme-chirpy-customized-upe/blob/master/README%20(CN).md)
+
 ## Why do I need this customization?
 
 While using the Chirpy theme, I have noticed some functionalities that are different from what I'm accustomed to and some functionalities that are still missing. These include implementing blog login access (the current repository should be set to private or deployed to my own server), enhancing the Mathjax plugin, and changing the UI style, among others. Additionally, this serves as a challenge to test my frontend coding skills.
